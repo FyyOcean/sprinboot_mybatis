@@ -24,6 +24,7 @@ public class UserServiceImpl implements UserService{
     public void save(User user) {
         user.setId(UUID.randomUUID().toString());
         userDAO.save(user);
+        //int n=1/0;//测试事务生效
     }
 
     @Override

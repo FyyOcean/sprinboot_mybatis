@@ -17,6 +17,12 @@ import java.util.List;
 public class UserController {
     @Autowired
     private UserService userservice;
+    @RequestMapping("save")
+    public String save(User user){
+        userservice.save(user);
+        return"redirect:/user/findAll";
+    }
+
     //查询所有user
     @RequestMapping("findAll")
     public String findAll(Model model){
