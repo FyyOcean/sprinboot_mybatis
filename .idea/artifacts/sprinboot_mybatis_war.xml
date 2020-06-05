@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="sprinboot_mybatis:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>sprinboot_mybatis</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="sprinboot_mybatis.war">
+      <element id="artifact" artifact-name="sprinboot_mybatis:war exploded" />
+    </root>
+  </artifact>
+</component>
