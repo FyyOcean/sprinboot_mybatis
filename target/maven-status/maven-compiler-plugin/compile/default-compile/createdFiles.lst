@@ -1,7 +1,0 @@
-com\baizhi\dao\BaseDAO.class
-com\baizhi\entity\User.class
-com\baizhi\Application.class
-com\baizhi\controller\UserController.class
-com\baizhi\service\UserServiceImpl.class
-com\baizhi\dao\UserDAO.class
-com\baizhi\service\UserService.class
