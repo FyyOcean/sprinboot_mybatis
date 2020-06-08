@@ -18,3 +18,9 @@ spring:
 mybatis:
   mapper-locations: classpath:com/baizhi/mapper/*.xml
   type-aliases-package: com.baizhi.entity #默认类名,或者类名的首字母小写
+logging:
+  level:
+    root: info #指定根日志
+    com.baizhi.dao: debug #监听指定包中的日志 可以并列写多个
+  #path: F:/log #指定日志生成路径,默认名字为 spring.log
+  file: F:/log/aa.log #指定路径和名字生成日志

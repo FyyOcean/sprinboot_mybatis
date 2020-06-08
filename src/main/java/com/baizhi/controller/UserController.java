@@ -27,6 +27,7 @@ public class UserController {
     @RequestMapping("findAll")
     public String findAll(Model model){
         List<User> users = userservice.findAll();
+        System.out.println("查询所有");
         model.addAttribute("users",users);
         return "showAll";
     }
