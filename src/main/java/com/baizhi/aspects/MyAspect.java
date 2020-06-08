@@ -15,6 +15,7 @@ import org.springframework.stereotype.Component;
 //这是一个切面配置类
 @Component
 @Aspect
+@Order(2)
 public class MyAspect {
 /*    @Around("within(com.baizhi.service.*ServiceImpl)")
     public Object around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
@@ -47,15 +48,11 @@ public class MyAspect {
         System.out.println("当前执行方法名:"+joinPoint.getSignature().getName());
         System.out.println("当前执行方法参数:"+joinPoint.getArgs());
         System.out.println("当前目标对象target:"+joinPoint.getTarget());
-        System.out.println("----------进入前置通知1-----------");
-    }
-    @Before(value="within(com.baizhi.service.*ServiceImpl)")
-    //joinpoint 或许当前执行方法对象 方法的参数信息 以及目标对象
-    @Order(1)
-    public void Before2(JoinPoint joinPoint){
-        System.out.println("当前执行方法名:"+joinPoint.getSignature().getName());
-        System.out.println("当前执行方法参数:"+joinPoint.getArgs());
-        System.out.println("当前目标对象target:"+joinPoint.getTarget());
         System.out.println("----------进入前置通知2-----------");
+    }
+    @After("within(com.baizhi.service.*ServiceImpl)")
+    public void after(JoinPoint joinPoint){
+        System.out.println("---------进入后置通知4-----------");
+
     }
 }
